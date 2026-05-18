@@ -1,0 +1,132 @@
+-- INSTRUCTIONS FOR IMPORTING THE TABLE 'POPULAR_ARTISTS' TO YOUR PROJECT
+-- STEP 1 : OPEN YOUR PHPMYADMIN IN THE BROWSER
+-- STEP 2 : SELECT THE DATABASE OF YOUR PROJECT (RADIOGAGA)
+-- STEP 3 : CLICK ON THE BUTTON 'IMPORT' IN THE NAVBAR ON TOP OF THE PAGE
+-- STEP 4 : SELECT THE SQL FILE PROVIDED ('POPULAR_ARTISTS.SQL') IN THE DOWNLOADS FOLDER
+-- STEP 5 : CLICK ON THE BUTTON 'IMPORT' ON THE BOTTOM OF THE PAGE
+-- STEP 6 : PHPMYADMIN WILL SHOW A MESSAGE ON THE TOP OF THE PAGE
+-- STEP 7 : CHECK THE NEWLY CREATED TABLE : BROWSE IT AND LOOK AT THE STRUCTURE!
+-- STEP 8 : CHECK THE TABLE, IT SHOULD HAVE 8 COLUMNNS ( TAKE A LOOK BELOW ;-) )
+-- STEP 9 : CHECK THE TABLE, IT SHOULD HAVE 100 ROWS ( TAKE A LOOK BELOW ;-) )
+
+-- Table structure for table `popular_artists`
+--
+
+DROP TABLE IF EXISTS `popular_artists`;
+CREATE TABLE IF NOT EXISTS `popular_artists` (
+  `artist_id` int NOT NULL AUTO_INCREMENT,
+  `artist_name` varchar(255) NOT NULL,
+  `genre` varchar(100) NOT NULL,
+  `debut_year` year NOT NULL,
+  `country` varchar(100) NOT NULL,
+  `notable_work` varchar(255) DEFAULT NULL,
+  `youtube_link` varchar(255) DEFAULT NULL,
+  `wikipedia_link` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`artist_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `popular_artists`
+--
+
+INSERT INTO `popular_artists` (`artist_id`, `artist_name`, `genre`, `debut_year`, `country`, `notable_work`, `youtube_link`, `wikipedia_link`) VALUES
+(1, 'The Beatles', 'Rock', 1960, 'United Kingdom', 'Hey Jude', 'https://www.youtube.com/watch?v=A_MjCqQoLLA', 'https://en.wikipedia.org/wiki/The_Beatles'),
+(2, 'Elvis Presley', 'Rock and Roll', 1954, 'United States', 'Jailhouse Rock', 'https://www.youtube.com/watch?v=gj0Rz-uP4Mk', 'https://en.wikipedia.org/wiki/Elvis_Presley'),
+(3, 'Michael Jackson', 'Pop', 1964, 'United States', 'Thriller', 'https://www.youtube.com/watch?v=sOnqjkJTMaA', 'https://en.wikipedia.org/wiki/Michael_Jackson'),
+(4, 'Madonna', 'Pop', 1982, 'United States', 'Like a Prayer', 'https://www.youtube.com/watch?v=79fzeNUqQbQ', 'https://en.wikipedia.org/wiki/Madonna_(entertainer)'),
+(5, 'Elton John', 'Rock', 1962, 'United Kingdom', 'Your Song', 'https://www.youtube.com/watch?v=GlPlfCy1urI', 'https://en.wikipedia.org/wiki/Elton_John'),
+(6, 'Queen', 'Rock', 1970, 'United Kingdom', 'Bohemian Rhapsody', 'https://www.youtube.com/watch?v=fJ9rUzIMcZQ', 'https://en.wikipedia.org/wiki/Queen_(band)'),
+(7, 'Pink Floyd', 'Progressive Rock', 1965, 'United Kingdom', 'Comfortably Numb', 'https://www.youtube.com/watch?v=_FrOQC-zEog', 'https://en.wikipedia.org/wiki/Pink_Floyd'),
+(8, 'Led Zeppelin', 'Hard Rock', 1968, 'United Kingdom', 'Stairway to Heaven', 'https://www.youtube.com/watch?v=QkF3oxziUI4', 'https://en.wikipedia.org/wiki/Led_Zeppelin'),
+(9, 'Nirvana', 'Grunge', 1987, 'United States', 'Smells Like Teen Spirit', 'https://www.youtube.com/watch?v=hTWKbfoikeg', 'https://en.wikipedia.org/wiki/Nirvana_(band)'),
+(10, 'The Rolling Stones', 'Rock', 1962, 'United Kingdom', '(I Can’t Get No) Satisfaction', 'https://www.youtube.com/watch?v=nrIPxlFzDi0', 'https://en.wikipedia.org/wiki/The_Rolling_Stones'),
+(11, 'Bob Dylan', 'Folk', 1961, 'United States', 'Like a Rolling Stone', 'https://www.youtube.com/watch?v=IwOfCgkyEj0', 'https://en.wikipedia.org/wiki/Bob_Dylan'),
+(12, 'U2', 'Rock', 1976, 'Ireland', 'One', 'https://www.youtube.com/watch?v=ftjEcrrf7r0', 'https://en.wikipedia.org/wiki/U2'),
+(13, 'Beyoncé', 'Pop', 1997, 'United States', 'Halo', 'https://www.youtube.com/watch?v=bnVUHWCynig', 'https://en.wikipedia.org/wiki/Beyonc%C3%A9'),
+(14, 'Adele', 'Pop', 2006, 'United Kingdom', 'Someone Like You', 'https://www.youtube.com/watch?v=hLQl3WQQoQ0', 'https://en.wikipedia.org/wiki/Adele'),
+(15, 'Coldplay', 'Alternative Rock', 1996, 'United Kingdom', 'Fix You', 'https://www.youtube.com/watch?v=k4V3Mo61fJM', 'https://en.wikipedia.org/wiki/Coldplay'),
+(16, 'The Beach Boys', 'Rock', 1961, 'United States', 'Good Vibrations', 'https://www.youtube.com/watch?v=mdt0SOqPJcg', 'https://en.wikipedia.org/wiki/The_Beach_Boys'),
+(17, 'Prince', 'Pop', 1978, 'United States', 'Purple Rain', 'https://www.youtube.com/watch?v=TvnYmWpD_T8', 'https://en.wikipedia.org/wiki/Prince_(musician)'),
+(18, 'David Bowie', 'Rock', 1962, 'United Kingdom', 'Heroes', 'https://www.youtube.com/watch?v=Tgcc5V9Hu3g', 'https://en.wikipedia.org/wiki/David_Bowie'),
+(19, 'Rihanna', 'Pop', 2005, 'Barbados', 'Umbrella', 'https://www.youtube.com/watch?v=CvBfHwUxHIk', 'https://en.wikipedia.org/wiki/Rihanna'),
+(20, 'Taylor Swift', 'Pop', 2006, 'United States', 'Shake It Off', 'https://www.youtube.com/watch?v=nfWlot6h_JM', 'https://en.wikipedia.org/wiki/Taylor_Swift'),
+(21, 'Drake', 'Hip Hop', 2001, 'Canada', 'Hotline Bling', 'https://www.youtube.com/watch?v=uxpDa-c-4Mc', 'https://en.wikipedia.org/wiki/Drake_(musician)'),
+(22, 'Kanye West', 'Hip Hop', 2003, 'United States', 'Stronger', 'https://www.youtube.com/watch?v=PsO6ZnUZI0g', 'https://en.wikipedia.org/wiki/Kanye_West'),
+(23, 'Jay-Z', 'Hip Hop', 1996, 'United States', 'Empire State of Mind', 'https://www.youtube.com/watch?v=0UjsXo9l6I8', 'https://en.wikipedia.org/wiki/Jay-Z'),
+(24, 'Eminem', 'Hip Hop', 1996, 'United States', 'Lose Yourself', 'https://www.youtube.com/watch?v=_Yhyp-_hX2s', 'https://en.wikipedia.org/wiki/Eminem'),
+(25, 'Whitney Houston', 'Pop', 1985, 'United States', 'I Will Always Love You', 'https://www.youtube.com/watch?v=3JWTaaS7LdU', 'https://en.wikipedia.org/wiki/Whitney_Houston'),
+(26, 'Celine Dion', 'Pop', 1981, 'Canada', 'My Heart Will Go On', 'https://www.youtube.com/watch?v=WNIPqafd4As', 'https://en.wikipedia.org/wiki/Celine_Dion'),
+(27, 'Maroon 5', 'Pop Rock', 2001, 'United States', 'Sugar', 'https://www.youtube.com/watch?v=09R8_2nJtjg', 'https://en.wikipedia.org/wiki/Maroon_5'),
+(28, 'The Weeknd', 'R&B', 2010, 'Canada', 'Blinding Lights', 'https://www.youtube.com/watch?v=4NRXx6U8ABQ', 'https://en.wikipedia.org/wiki/The_Weeknd'),
+(29, 'Ed Sheeran', 'Pop', 2011, 'United Kingdom', 'Shape of You', 'https://www.youtube.com/watch?v=JGwWNGJdvx8', 'https://en.wikipedia.org/wiki/Ed_Sheeran'),
+(30, 'Bruno Mars', 'Pop', 2004, 'United States', 'Just the Way You Are', 'https://www.youtube.com/watch?v=LjhCEhWiKXk', 'https://en.wikipedia.org/wiki/Bruno_Mars'),
+(31, 'Justin Bieber', 'Pop', 2009, 'Canada', 'Sorry', 'https://www.youtube.com/watch?v=fRh_vgS2dFE', 'https://en.wikipedia.org/wiki/Justin_Bieber'),
+(32, 'Katy Perry', 'Pop', 2001, 'United States', 'Firework', 'https://www.youtube.com/watch?v=QGJuMBdaqIw', 'https://en.wikipedia.org/wiki/Katy_Perry'),
+(33, 'Shakira', 'Pop', 1990, 'Colombia', 'Hips Don’t Lie', 'https://www.youtube.com/watch?v=DUT5rEU6pqM', 'https://en.wikipedia.org/wiki/Shakira'),
+(34, 'Lady Gaga', 'Pop', 2008, 'United States', 'Bad Romance', 'https://www.youtube.com/watch?v=qrO4YZeyl0I', 'https://en.wikipedia.org/wiki/Lady_Gaga'),
+(35, 'Harry Styles', 'Pop', 2010, 'United Kingdom', 'Sign of the Times', 'https://www.youtube.com/watch?v=qN4ooNx77u0', 'https://en.wikipedia.org/wiki/Harry_Styles'),
+(36, 'Sam Smith', 'Pop', 2012, 'United Kingdom', 'Stay With Me', 'https://www.youtube.com/watch?v=pB-5XG-DbAA', 'https://en.wikipedia.org/wiki/Sam_Smith'),
+(37, 'Ariana Grande', 'Pop', 2008, 'United States', 'Thank U, Next', 'https://www.youtube.com/watch?v=gl1aHhXnN1k', 'https://en.wikipedia.org/wiki/Ariana_Grande'),
+(38, 'Post Malone', 'Hip Hop', 2015, 'United States', 'Circles', 'https://www.youtube.com/watch?v=wXhTHyIgQ_U', 'https://en.wikipedia.org/wiki/Post_Malone'),
+(39, 'Billie Eilish', 'Pop', 2015, 'United States', 'Bad Guy', 'https://www.youtube.com/watch?v=DyDfgMOUjCI', 'https://en.wikipedia.org/wiki/Billie_Eilish'),
+(40, 'Dua Lipa', 'Pop', 2015, 'United Kingdom', 'Don’t Start Now', 'https://www.youtube.com/watch?v=oygrmJFKYZY', 'https://en.wikipedia.org/wiki/Dua_Lipa'),
+(41, 'Imagine Dragons', 'Alternative Rock', 2008, 'United States', 'Radioactive', 'https://www.youtube.com/watch?v=ktvTqknDobU', 'https://en.wikipedia.org/wiki/Imagine_Dragons'),
+(42, 'The Killers', 'Alternative Rock', 2001, 'United States', 'Mr. Brightside', 'https://www.youtube.com/watch?v=gGdGFtwCNBE', 'https://en.wikipedia.org/wiki/The_Killers'),
+(43, 'Green Day', 'Punk Rock', 1987, 'United States', 'Boulevard of Broken Dreams', 'https://www.youtube.com/watch?v=Soa3gO7tL-c', 'https://en.wikipedia.org/wiki/Green_Day'),
+(44, 'Foo Fighters', 'Rock', 1994, 'United States', 'Everlong', 'https://www.youtube.com/watch?v=eBG7P-K-r1Y', 'https://en.wikipedia.org/wiki/Foo_Fighters'),
+(45, 'Linkin Park', 'Nu Metal', 1996, 'United States', 'In the End', 'https://www.youtube.com/watch?v=eVTXPUF4Oz4', 'https://en.wikipedia.org/wiki/Linkin_Park'),
+(46, 'Red Hot Chili Peppers', 'Funk Rock', 1983, 'United States', 'Californication', 'https://www.youtube.com/watch?v=YlUKcNNmywk', 'https://en.wikipedia.org/wiki/Red_Hot_Chili_Peppers'),
+(47, 'Metallica', 'Heavy Metal', 1981, 'United States', 'Enter Sandman', 'https://www.youtube.com/watch?v=CD-E-LDc384', 'https://en.wikipedia.org/wiki/Metallica'),
+(48, 'AC/DC', 'Hard Rock', 1973, 'Australia', 'Back in Black', 'https://www.youtube.com/watch?v=pAgnJDJN4VA', 'https://en.wikipedia.org/wiki/AC/DC'),
+(49, 'Bon Jovi', 'Rock', 1983, 'United States', 'Livin’ on a Prayer', 'https://www.youtube.com/watch?v=lDK9QqIzhwk', 'https://en.wikipedia.org/wiki/Bon_Jovi'),
+(50, 'ABBA', 'Pop', 1972, 'Sweden', 'Dancing Queen', 'https://www.youtube.com/watch?v=xFrGuyw1V8s', 'https://en.wikipedia.org/wiki/ABBA'),
+(51, 'The Beatles', 'Rock', 1960, 'United Kingdom', 'Hey Jude', 'https://www.youtube.com/watch?v=A_MjCqQoLLA', 'https://en.wikipedia.org/wiki/The_Beatles'),
+(52, 'Elvis Presley', 'Rock and Roll', 1954, 'United States', 'Jailhouse Rock', 'https://www.youtube.com/watch?v=gj0Rz-uP4Mk', 'https://en.wikipedia.org/wiki/Elvis_Presley'),
+(53, 'Michael Jackson', 'Pop', 1964, 'United States', 'Thriller', 'https://www.youtube.com/watch?v=sOnqjkJTMaA', 'https://en.wikipedia.org/wiki/Michael_Jackson'),
+(54, 'Madonna', 'Pop', 1982, 'United States', 'Like a Prayer', 'https://www.youtube.com/watch?v=79fzeNUqQbQ', 'https://en.wikipedia.org/wiki/Madonna_(entertainer)'),
+(55, 'Elton John', 'Rock', 1962, 'United Kingdom', 'Your Song', 'https://www.youtube.com/watch?v=GlPlfCy1urI', 'https://en.wikipedia.org/wiki/Elton_John'),
+(56, 'Queen', 'Rock', 1970, 'United Kingdom', 'Bohemian Rhapsody', 'https://www.youtube.com/watch?v=fJ9rUzIMcZQ', 'https://en.wikipedia.org/wiki/Queen_(band)'),
+(57, 'Pink Floyd', 'Progressive Rock', 1965, 'United Kingdom', 'Comfortably Numb', 'https://www.youtube.com/watch?v=_FrOQC-zEog', 'https://en.wikipedia.org/wiki/Pink_Floyd'),
+(58, 'Led Zeppelin', 'Hard Rock', 1968, 'United Kingdom', 'Stairway to Heaven', 'https://www.youtube.com/watch?v=QkF3oxziUI4', 'https://en.wikipedia.org/wiki/Led_Zeppelin'),
+(59, 'Nirvana', 'Grunge', 1987, 'United States', 'Smells Like Teen Spirit', 'https://www.youtube.com/watch?v=hTWKbfoikeg', 'https://en.wikipedia.org/wiki/Nirvana_(band)'),
+(60, 'The Rolling Stones', 'Rock', 1962, 'United Kingdom', '(I Can’t Get No) Satisfaction', 'https://www.youtube.com/watch?v=nrIPxlFzDi0', 'https://en.wikipedia.org/wiki/The_Rolling_Stones'),
+(61, 'Bob Dylan', 'Folk', 1961, 'United States', 'Like a Rolling Stone', 'https://www.youtube.com/watch?v=IwOfCgkyEj0', 'https://en.wikipedia.org/wiki/Bob_Dylan'),
+(62, 'U2', 'Rock', 1976, 'Ireland', 'One', 'https://www.youtube.com/watch?v=ftjEcrrf7r0', 'https://en.wikipedia.org/wiki/U2'),
+(63, 'Beyoncé', 'Pop', 1997, 'United States', 'Halo', 'https://www.youtube.com/watch?v=bnVUHWCynig', 'https://en.wikipedia.org/wiki/Beyonc%C3%A9'),
+(64, 'Adele', 'Pop', 2006, 'United Kingdom', 'Someone Like You', 'https://www.youtube.com/watch?v=hLQl3WQQoQ0', 'https://en.wikipedia.org/wiki/Adele'),
+(65, 'Coldplay', 'Alternative Rock', 1996, 'United Kingdom', 'Fix You', 'https://www.youtube.com/watch?v=k4V3Mo61fJM', 'https://en.wikipedia.org/wiki/Coldplay'),
+(66, 'The Beach Boys', 'Rock', 1961, 'United States', 'Good Vibrations', 'https://www.youtube.com/watch?v=mdt0SOqPJcg', 'https://en.wikipedia.org/wiki/The_Beach_Boys'),
+(67, 'Prince', 'Pop', 1978, 'United States', 'Purple Rain', 'https://www.youtube.com/watch?v=TvnYmWpD_T8', 'https://en.wikipedia.org/wiki/Prince_(musician)'),
+(68, 'David Bowie', 'Rock', 1962, 'United Kingdom', 'Heroes', 'https://www.youtube.com/watch?v=Tgcc5V9Hu3g', 'https://en.wikipedia.org/wiki/David_Bowie'),
+(69, 'Rihanna', 'Pop', 2005, 'Barbados', 'Umbrella', 'https://www.youtube.com/watch?v=CvBfHwUxHIk', 'https://en.wikipedia.org/wiki/Rihanna'),
+(70, 'Taylor Swift', 'Pop', 2006, 'United States', 'Shake It Off', 'https://www.youtube.com/watch?v=nfWlot6h_JM', 'https://en.wikipedia.org/wiki/Taylor_Swift'),
+(71, 'Drake', 'Hip Hop', 2001, 'Canada', 'Hotline Bling', 'https://www.youtube.com/watch?v=uxpDa-c-4Mc', 'https://en.wikipedia.org/wiki/Drake_(musician)'),
+(72, 'Kanye West', 'Hip Hop', 2003, 'United States', 'Stronger', 'https://www.youtube.com/watch?v=PsO6ZnUZI0g', 'https://en.wikipedia.org/wiki/Kanye_West'),
+(73, 'Jay-Z', 'Hip Hop', 1996, 'United States', 'Empire State of Mind', 'https://www.youtube.com/watch?v=0UjsXo9l6I8', 'https://en.wikipedia.org/wiki/Jay-Z'),
+(74, 'Eminem', 'Hip Hop', 1996, 'United States', 'Lose Yourself', 'https://www.youtube.com/watch?v=_Yhyp-_hX2s', 'https://en.wikipedia.org/wiki/Eminem'),
+(75, 'Whitney Houston', 'Pop', 1985, 'United States', 'I Will Always Love You', 'https://www.youtube.com/watch?v=3JWTaaS7LdU', 'https://en.wikipedia.org/wiki/Whitney_Houston'),
+(76, 'Celine Dion', 'Pop', 1981, 'Canada', 'My Heart Will Go On', 'https://www.youtube.com/watch?v=WNIPqafd4As', 'https://en.wikipedia.org/wiki/Celine_Dion'),
+(77, 'Maroon 5', 'Pop Rock', 2001, 'United States', 'Sugar', 'https://www.youtube.com/watch?v=09R8_2nJtjg', 'https://en.wikipedia.org/wiki/Maroon_5'),
+(78, 'The Weeknd', 'R&B', 2010, 'Canada', 'Blinding Lights', 'https://www.youtube.com/watch?v=4NRXx6U8ABQ', 'https://en.wikipedia.org/wiki/The_Weeknd'),
+(79, 'Ed Sheeran', 'Pop', 2011, 'United Kingdom', 'Shape of You', 'https://www.youtube.com/watch?v=JGwWNGJdvx8', 'https://en.wikipedia.org/wiki/Ed_Sheeran'),
+(80, 'Bruno Mars', 'Pop', 2004, 'United States', 'Just the Way You Are', 'https://www.youtube.com/watch?v=LjhCEhWiKXk', 'https://en.wikipedia.org/wiki/Bruno_Mars'),
+(81, 'Justin Bieber', 'Pop', 2009, 'Canada', 'Sorry', 'https://www.youtube.com/watch?v=fRh_vgS2dFE', 'https://en.wikipedia.org/wiki/Justin_Bieber'),
+(82, 'Katy Perry', 'Pop', 2001, 'United States', 'Firework', 'https://www.youtube.com/watch?v=QGJuMBdaqIw', 'https://en.wikipedia.org/wiki/Katy_Perry'),
+(83, 'Shakira', 'Pop', 1990, 'Colombia', 'Hips Don’t Lie', 'https://www.youtube.com/watch?v=DUT5rEU6pqM', 'https://en.wikipedia.org/wiki/Shakira'),
+(84, 'Lady Gaga', 'Pop', 2008, 'United States', 'Bad Romance', 'https://www.youtube.com/watch?v=qrO4YZeyl0I', 'https://en.wikipedia.org/wiki/Lady_Gaga'),
+(85, 'Harry Styles', 'Pop', 2010, 'United Kingdom', 'Sign of the Times', 'https://www.youtube.com/watch?v=qN4ooNx77u0', 'https://en.wikipedia.org/wiki/Harry_Styles'),
+(86, 'Sam Smith', 'Pop', 2012, 'United Kingdom', 'Stay With Me', 'https://www.youtube.com/watch?v=pB-5XG-DbAA', 'https://en.wikipedia.org/wiki/Sam_Smith'),
+(87, 'Ariana Grande', 'Pop', 2008, 'United States', 'Thank U, Next', 'https://www.youtube.com/watch?v=gl1aHhXnN1k', 'https://en.wikipedia.org/wiki/Ariana_Grande'),
+(88, 'Post Malone', 'Hip Hop', 2015, 'United States', 'Circles', 'https://www.youtube.com/watch?v=wXhTHyIgQ_U', 'https://en.wikipedia.org/wiki/Post_Malone'),
+(89, 'Billie Eilish', 'Pop', 2015, 'United States', 'Bad Guy', 'https://www.youtube.com/watch?v=DyDfgMOUjCI', 'https://en.wikipedia.org/wiki/Billie_Eilish'),
+(90, 'Dua Lipa', 'Pop', 2015, 'United Kingdom', 'Don’t Start Now', 'https://www.youtube.com/watch?v=oygrmJFKYZY', 'https://en.wikipedia.org/wiki/Dua_Lipa'),
+(91, 'Imagine Dragons', 'Alternative Rock', 2008, 'United States', 'Radioactive', 'https://www.youtube.com/watch?v=ktvTqknDobU', 'https://en.wikipedia.org/wiki/Imagine_Dragons'),
+(92, 'The Killers', 'Alternative Rock', 2001, 'United States', 'Mr. Brightside', 'https://www.youtube.com/watch?v=gGdGFtwCNBE', 'https://en.wikipedia.org/wiki/The_Killers'),
+(93, 'Green Day', 'Punk Rock', 1987, 'United States', 'Boulevard of Broken Dreams', 'https://www.youtube.com/watch?v=Soa3gO7tL-c', 'https://en.wikipedia.org/wiki/Green_Day'),
+(94, 'Foo Fighters', 'Rock', 1994, 'United States', 'Everlong', 'https://www.youtube.com/watch?v=eBG7P-K-r1Y', 'https://en.wikipedia.org/wiki/Foo_Fighters'),
+(95, 'Linkin Park', 'Nu Metal', 1996, 'United States', 'In the End', 'https://www.youtube.com/watch?v=eVTXPUF4Oz4', 'https://en.wikipedia.org/wiki/Linkin_Park'),
+(96, 'Red Hot Chili Peppers', 'Funk Rock', 1983, 'United States', 'Californication', 'https://www.youtube.com/watch?v=YlUKcNNmywk', 'https://en.wikipedia.org/wiki/Red_Hot_Chili_Peppers'),
+(97, 'Metallica', 'Heavy Metal', 1981, 'United States', 'Enter Sandman', 'https://www.youtube.com/watch?v=CD-E-LDc384', 'https://en.wikipedia.org/wiki/Metallica'),
+(98, 'AC/DC', 'Hard Rock', 1973, 'Australia', 'Back in Black', 'https://www.youtube.com/watch?v=pAgnJDJN4VA', 'https://en.wikipedia.org/wiki/AC/DC'),
+(99, 'Bon Jovi', 'Rock', 1983, 'United States', 'Livin’ on a Prayer', 'https://www.youtube.com/watch?v=lDK9QqIzhwk', 'https://en.wikipedia.org/wiki/Bon_Jovi'),
+(100, 'ABBA', 'Pop', 1972, 'Sweden', 'Dancing Queen', 'https://www.youtube.com/watch?v=xFrGuyw1V8s', 'https://en.wikipedia.org/wiki/ABBA');

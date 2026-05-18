@@ -1,0 +1,114 @@
+@import url("../CSS/Index.css");
+
+/* ===============================
+   PAGE TITLE
+*/
+.page-title {
+  margin: 160px 0 60px;
+  text-align: center;
+  font-family: "AOTFont";
+  font-size: 3.4em;
+  color: #a06102;
+  letter-spacing: 3px;
+  text-shadow: 0 0 14px rgba(160, 97, 2, 0.6);
+}
+
+/* NAV HOVER */
+.nav-links li a {
+  color: #a06102;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+.nav-popular-artists:hover span {
+  color: hsl(0, 0%, 100%);
+  transform: scale(1.08);
+}
+
+/* TABLE CONTAINER */
+.table-wrapper {
+  padding: 0 8vw 120px;
+}
+
+/* TABLE BASE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "textFont", serif;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* TABLE HEADER */
+thead {
+  background: linear-gradient(to right, #3a3a3a, #1f1f1f, #3a3a3a);
+}
+
+thead th {
+  padding: 18px;
+  font-family: "AOTFont";
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  color: #a06102;
+  text-align: center;
+}
+
+/* TABLE BODY (ZEBRA) */
+tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+tbody td {
+  padding: 16px 18px;
+  color: #d8d8d8;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* ARTIST NAME */
+.artist-name a {
+  color: #a06102;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.artist-name a:hover {
+  text-shadow: 0 0 10px rgba(160, 97, 2, 0.8);
+}
+
+/* ICON CELLS */
+.yt-cell,
+.wiki-cell {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* ICONS */
+.yt-icon,
+.wiki-icon {
+  width: 64px;
+  height: auto;
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.8));
+}
+
+.yt-cell a:hover .yt-icon,
+.wiki-cell a:hover .wiki-icon {
+  transform: scale(1.2);
+  filter: brightness(1.25);
+}
+
+/* FORCE CENTER EVERYTHING */
+table th,
+table td {
+  text-align: center;
+  vertical-align: middle;
+}

@@ -1,0 +1,290 @@
+    @import url("../CSS/Index.css");
+
+    body {
+      background-color: #0e0e0e;
+      padding-top:150px;
+    }
+
+
+    /* PAGE HEADER */
+    .page-banner {
+      text-align: center;
+      padding: 300px 20px;
+      background: url("../Images/soundtrack_Banner.jpg") center/cover no-repeat;
+      backdrop-filter: blur(3px);
+    }
+
+    .banner-title {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      width: 100%;
+      z-index: 10;
+      font-size: 1.3em;
+    }
+
+
+    /* first line */
+    .writer {
+      font-family: "textFont";
+      font-weight: bold;
+      color: #042696dd;
+      font-size: 1.2em;
+      letter-spacing: 2px;
+      opacity: 0.9;
+    }
+
+
+    /* second line */
+    .page-title {
+      font-family: "OldEnglishFont", serif;
+      color: white;
+      text-shadow: 0px 0px 10px hsl(216, 100%, 60%);
+      font-size: 2em;
+      margin-top: 5px;
+      letter-spacing: 1px;
+      opacity: 1;
+    }
+
+
+    /* FULL-WIDTH GRID — NO GAPS OR EMPTY AREAS */
+    .playlist-seasons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 cards filling width */
+      gap: 0;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+
+
+    /* ALBUM CARD STYLE */
+    .playlist-card {
+      position: relative;
+      overflow: hidden;
+      height: 650px;
+      text-decoration: none;
+      border: 0.5px solid rgba(0, 0, 0, 0.25);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+
+    /* CARD IMAGE */
+    .card-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.55);
+      transition: filter 0.4s ease;
+    }
+
+    .playlist-card:hover .card-bg {
+      filter: brightness(1);
+    }
+
+
+    /* TEXT OVERLAY */
+    .card-overlay {
+      position: absolute;
+      top: 70px; /* appears at top of album */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      text-align: center;
+      pointer-events: none;
+      color: white;
+      filter: brightness(0.55); /* same shadow as the image */
+      transition: filter 0.4s ease;
+    }
+
+    .playlist-card:hover .card-overlay {
+      filter: brightness(1); /* brighten text with image */
+    }
+
+
+    /* TEXT STYLES */
+    /* Season 1 */
+    .writer_C1 {
+      font-family: "textFont";
+      font-size: 0.5em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+      color: #042696dd;
+    }
+
+    .album-title_C1 {
+      font-family: "OldEnglishFont";
+      font-size: 1.45em;
+      margin-bottom: 4px;
+      color: white;
+      text-shadow: 0px 0px 10px hsl(216, 100%, 60%);
+    }
+
+    .album-sub_C1 {
+      font-family: "OldEnglishFont";
+      font-size: 1.1em;
+      opacity: 0.9;
+      color: white;
+      text-shadow: 0px 0px 10px hsl(216, 100%, 60%);
+    }
+
+
+    /* Season 2 */
+    .writer_C2 {
+      font-family: "textFont";
+      font-size: 0.5em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+      color: white;
+    }
+
+    .album-title_C2 {
+      font-family: "OldEnglishFont";
+      font-size: 1.45em;
+      margin-bottom: 4px;
+      color: white;
+      text-shadow: 0px 0px 10px hsl(337, 100%, 60%);
+    }
+
+    .album-sub_C2 {
+      font-family: "OldEnglishFont";
+      font-size: 1.1em;
+      opacity: 0.9;
+      color: white;
+      text-shadow: 0px 0px 10px hsl(337, 100%, 60%);
+    }
+
+
+    /* Season 3 */
+    .writer_C3 {
+      font-family: "textFont";
+      font-size: 0.5em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+      color: white;
+    }
+
+    .album-title_C3 {
+      font-family: "OldEnglishFont";
+      font-size: 1.45em;
+      margin-bottom: 4px;
+      color: white;
+      text-shadow: 0px 0px 10px hsl(192, 100%, 60%, 100%);
+    }
+
+    .album-sub_C3 {
+      font-family: "OldEnglishFont";
+      font-size: 1.1em;
+      opacity: 0.9;
+      color: white;
+      text-shadow: 0px 0px 10px hsl(192, 100%, 60%, 100%);
+      text-
+    }
+
+
+    /* Final Season */
+    .writer_C4 {
+      font-family: "textFont";
+      font-size: 0.5em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+      color: white;
+    }
+
+    .album-title_C4 {
+      font-family: "OldEnglishFont";
+      font-size: 1.45em;
+      margin-bottom: 4px;
+      color: white;
+      text-shadow: 0px 0px 10px hsl(0, 0%, 0%);
+    }
+
+    .album-sub_C4 {
+      font-family: "OldEnglishFont";
+      font-size: 1.1em;
+      opacity: 0.9;
+      color: white;
+      text-shadow: 0px 0px 10px hsl(0, 0%, 0%);
+    }
+
+
+    /* HOVER UPSCALE ANIMATION */
+    .playlist-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 35px rgba(255, 215, 0, 0.35);
+      z-index: 9;
+    }
+
+
+    /* CHAIN BORDER */
+    .comic-Chain-border {
+      position: relative;
+      width: 100%;
+      height: 150px;
+      background: transparent url("../Images/chain_link_comic.png") repeat-x;
+      background-size: auto 100%;  /* keep true proportions */
+      background-repeat: repeat-x;
+      animation: chainSwing 10s ease-in-out infinite alternate;
+      z-index: 5;
+      margin-top: -20px;
+      margin-bottom: -25px;
+      z-index: 10;
+    }
+    @keyframes chainSwing {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 100% 0;
+      }
+    }
+
+
+    /* =========================
+      AUTO-FOCUSED ALBUM
+      ========================= */
+      html {
+        scroll-behavior: smooth;
+      }
+
+    .playlist-card.active {
+      transform: scale(1.05);
+      box-shadow: 0 0 35px rgba(255, 215, 0, 0.45);
+      z-index: 9;
+    }
+
+    .playlist-card.active .card-bg {
+      filter: brightness(1);
+    }
+
+    .playlist-card.active .card-overlay {
+      filter: brightness(1);
+    }
+
+    @keyframes albumPulse {
+      0% {
+        box-shadow: 0 0 35px rgba(255, 215, 0, 0.45);
+        transform: scale(1.05);
+      }
+      50% {
+        box-shadow: 0 0 55px rgba(255, 215, 0, 0.75);
+        transform: scale(1.07);
+      }
+      100% {
+        box-shadow: 0 0 35px rgba(255, 215, 0, 0.45);
+        transform: scale(1.05);
+      }
+    }
+
+    .playlist-card.active {
+      animation: albumPulse 1.6s ease-in-out 3;
+    }

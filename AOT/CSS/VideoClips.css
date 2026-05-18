@@ -1,0 +1,652 @@
+@import url("../CSS/Index.css");
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: hsl(130, 100%, 65%);
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+.nav-videoclips:hover span {
+  color: hsl(0, 0%, 100%);
+  transform: scale(1.08);
+}
+
+/* HERO SECTION */
+
+.videoclips-hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Background video */
+.videoclips-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Cinematic side darkening */
+.videoclips-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(0, 0, 0, 0.3) 65%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+/* Fade OUT bottom (hero only) */
+.videoclips-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 160px; /* reduced */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.35) 60%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Content */
+.videoclips-hero-overlay {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  padding: 260px 0 0 8vw;
+}
+
+.videoclips-title {
+  font-family: "AOTFont";
+  font-size: 4.5em;
+  letter-spacing: 3px;
+  margin-bottom: 45px;
+  color: hsl(130, 100%, 65%);
+  animation: titleGlowBlink 3s ease-in-out infinite;
+}
+
+@keyframes titleGlowBlink {
+  0% {
+    color: hsl(130, 100%, 65%);
+    text-shadow: 0 0 8px rgba(60, 255, 140, 0.6);
+  }
+
+  45% {
+    color: hsl(130, 100%, 65%);
+    text-shadow: 0 0 8px rgba(60, 255, 140, 0.6);
+  }
+
+  55% {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  }
+
+  100% {
+    color: hsl(130, 100%, 65%);
+    text-shadow: 0 0 8px rgba(60, 255, 140, 0.6);
+  }
+}
+
+.videoclips-subtitle {
+  font-family: textFont;
+  font-size: 2em;
+  font-weight: bold;
+  color: #ddd;
+  max-width: 850px;
+  margin-bottom: 40px;
+}
+
+.videoclips-desc {
+  font-family: textFont;
+  font-size: 1.5em;
+  line-height: 1.8em;
+  color: #ddd;
+  max-width: 1100px;
+  margin-bottom: 40px;
+}
+
+.videoclips-alert {
+  font-family: textFont;
+  font-size: 1.1em;
+  color: #ddd;
+  max-width: 800px;
+}
+
+#have_fun {
+  font-family: textFont;
+  font-size: 3em;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* Highlights */
+.green {
+  color: hsl(130, 100%, 65%);
+  font-weight: bold;
+  text-shadow: 0 0 6px rgba(60, 255, 140, 0.6);
+}
+
+.Red {
+  color: hsl(0, 100%, 65%);
+  font-weight: bold;
+  text-shadow: 0 0 6px rgba(255, 60, 60, 0.6);
+}
+
+/* =========================
+   SEASONS (1–3)
+   ========================= */
+
+.season {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Background video */
+.season-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.3);
+  z-index: 0;
+}
+
+.season-s4 .season-bg {
+  filter: brightness(0.5);
+}
+
+/* Fade IN top */
+.season::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 160px; /* reduced */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.35) 60%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Fade OUT bottom */
+.season::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 160px; /* reduced */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.35) 60%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Overlay */
+.season-overlay {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  padding: 130px 0 0 2vw;
+  display: block;
+  background: none;
+  backdrop-filter: none;
+}
+
+/* =========================
+   SEASON SPLIT LAYOUT
+   ========================= */
+
+.season-content.split {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+/* LEFT SIDE */
+.season-left {
+  flex: 0 0 320px;
+  padding-top: 20px;
+}
+
+/* LEFT SIDE – CHOICES */
+.season-choices {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.choice-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-family: textFont;
+  font-size: 1.1em;
+  max-width: 280px;
+  padding: 14px 18px;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.choice-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateX(6px);
+}
+
+/* RIGHT SIDE */
+.season-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 35vw;
+  height: 100vh;
+  padding: 170px 28px 28px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  transform: translateY(-100%);
+  transition: transform 0.45s ease;
+  z-index: 20;
+}
+
+/* Open state for right panel */
+.season-right.open {
+  transform: translateY(0);
+}
+
+/* Hide playlists by default */
+.season-right .playlist {
+  display: none;
+}
+
+/* Visible playlist */
+.season-right .playlist.active {
+  display: block;
+  animation: playlistDrop 0.35s ease;
+}
+
+/* PLAYLIST ITEMS */
+
+.playlist {
+  display: none;
+}
+
+.playlist-item {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 16px 0;
+  cursor: pointer;
+}
+
+/* FULL-WIDTH HOVER FIX */
+.playlist-item {
+  margin-left: -28px;
+  margin-right: -28px;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.playlist-thumb {
+  width: 140px;
+  height: 80px;
+}
+
+.playlist-item:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.playlist-thumb {
+  width: 110px;
+  height: 62px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.playlist-title {
+  font-family: textFont;
+  font-size: 1.25em;
+  color: #eee;
+}
+
+.playlist-heading {
+  font-family: "AOTFont";
+  font-size: 4em;
+  margin-bottom: 20px;
+  color: hsl(130, 100%, 65%);
+  animation: headingPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes playlistDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.season-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.season-title {
+  font-family: "textFont";
+  font-size: 4.2em;
+  margin-bottom: 40px;
+  line-height: 1;
+}
+
+/* LAST SECTION */
+/* Fade IN only — NO fade out */
+.season:last-of-type::after {
+  display: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .videoclips-hero-overlay {
+    padding: 140px 6vw 0;
+  }
+
+  .videoclips-title {
+    font-size: 3.2em;
+  }
+
+  .videoclips-subtitle {
+    font-size: 1.3em;
+  }
+
+  .videoclips-desc {
+    font-size: 1.15em;
+  }
+
+  .season-overlay {
+    padding: 0 6vw;
+  }
+}
+
+/* VIDEO MODAL */
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 100;
+}
+
+.video-modal.open {
+  display: block;
+}
+
+.video-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.video-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  max-width: 960px;
+  background: #000;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.video-modal-content video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.video-modal-close {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  color: #000;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.coming-soon {
+  position: absolute;
+  right: -125px;
+  top: 50%;
+  transform: rotate(90deg) translateY(-50%);
+  transform-origin: center;
+
+  font-size: 2.5em;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.35);
+  font-weight: 600;
+  pointer-events: none;
+  user-select: none;
+}
+
+.coming-soon {
+  animation: fadePulse 3s ease-in-out infinite;
+}
+
+@keyframes fadePulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+/* SEASON COLOR THEMING  */
+
+/* ---------- SEASON 1 (BLUE) ---------- */
+.season-s1 .choice-btn:hover {
+  background: rgba(60, 120, 255, 0.18);
+}
+
+.season-s1 .playlist-heading {
+  color: hsl(216, 100%, 60%);
+}
+
+.season-s1 .playlist-item:hover {
+  background: rgba(60, 120, 255, 0.12);
+}
+
+.season-s1 .playlist-item:hover .playlist-thumb {
+  box-shadow: 0 0 14px hsl(216, 100%, 60%);
+}
+
+.season-s1 .coming-soon {
+  color: hsl(216, 100%, 60%);
+}
+
+/* ---------- SEASON 2 (RED) ---------- */
+.season-s2 .choice-btn:hover {
+  background: rgba(255, 60, 120, 0.18);
+}
+
+.season-s2 .playlist-heading {
+  color: hsl(337, 100%, 60%);
+}
+
+.season-s2 .playlist-item:hover {
+  background: rgba(255, 60, 120, 0.12);
+}
+
+.season-s2 .playlist-item:hover .playlist-thumb {
+  box-shadow: 0 0 14px hsl(337, 100%, 60%);
+}
+
+.season-s2 .coming-soon {
+  color: hsl(337, 100%, 60%);
+}
+
+/* ---------- SEASON 3 (CYAN) ---------- */
+.season-s3 .choice-btn:hover {
+  background: rgba(60, 220, 255, 0.18);
+}
+
+.season-s3 .playlist-heading {
+  color: hsl(192, 100%, 60%);
+}
+
+.season-s3 .playlist-item:hover {
+  background: rgba(60, 220, 255, 0.12);
+}
+
+.season-s3 .playlist-item:hover .playlist-thumb {
+  box-shadow: 0 0 14px hsl(192, 100%, 60%);
+}
+
+.season-s3 .coming-soon {
+  color: hsl(192, 100%, 60%);
+}
+
+/* ---------- SEASON 4 (VOID / BLOOD)  ---------- */
+.season-s4 .choice-btn:hover {
+  background: rgba(140, 20, 20, 0.35);
+}
+
+.season-s4 .playlist-heading {
+  color: hsl(6, 85%, 55%);
+}
+
+.season-s4 .playlist-item:hover {
+  background: rgba(160, 25, 25, 0.45);
+}
+
+.season-s4 .playlist-item:hover .playlist-thumb {
+  box-shadow: 0 0 14px rgba(180, 20, 20, 0.9);
+}
+
+.season-s4 .coming-soon {
+  color: hsl(6, 85%, 55%);
+}
+
+/* ---------- LAST ATTACK (GREEN) ---------- */
+.season-s5 .choice-btn:hover {
+  background: rgba(40, 160, 90, 0.28);
+}
+
+.season-s5 .playlist-heading {
+  color: hsl(145, 65%, 55%);
+}
+
+.season-s5 .playlist-item:hover {
+  background: rgba(40, 160, 90, 0.22);
+}
+
+.season-s5 .playlist-item:hover .playlist-thumb {
+  box-shadow: 0 0 14px rgba(60, 220, 140, 0.9);
+}
+
+.season-s5 .coming-soon {
+  color: hsl(145, 65%, 55%);
+}
+
+@keyframes headingPulse {
+  0% {
+    opacity: 0.75;
+    text-shadow: 0 0 6px currentColor;
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 18px currentColor;
+  }
+  100% {
+    opacity: 0.75;
+    text-shadow: 0 0 6px currentColor;
+  }
+}
+
+/* TARGET VIDEO HIGHLIGHT */
+.playlist-item.video-target {
+  background: rgba(255, 255, 255, 0.18);
+  outline: 2px solid currentColor;
+  outline-offset: -2px;
+  animation: targetPulse 1.6s ease-in-out 2;
+}
+
+/* TARGET PULSE ANIMATION */
+@keyframes targetPulse {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  50% {
+    box-shadow: 0 0 18px currentColor;
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.playlist-thumb {
+  width: 110px;
+  height: 62px;
+  border-radius: 6px;
+  background: #000;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}

@@ -1,0 +1,153 @@
+@import url("../CSS/Index.css");
+
+/* VIDEO BACKGROUND */
+
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  filter: brightness(0.6);
+}
+
+/* Dark overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* NAV HOVER */
+.nav-links li a {
+  color: #c41e3a;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+.nav-artists:hover span {
+  color: hsl(0, 0%, 100%);
+  transform: scale(1.08);
+}
+
+/* PAGE TITLE */
+
+.page-title {
+  text-align: center;
+  margin: 160px 0 80px;
+  font-size: 3.4em;
+  letter-spacing: 3px;
+  font-family: "AOTFont";
+  color: #c41e3a;
+  text-shadow: 0 0 15px rgba(196, 30, 58, 0.6);
+}
+
+/* ARTISTS LAYOUT  */
+
+.artists-container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 0 10vw 140px;
+}
+
+/* ARTIST CARD */
+
+.artist-card {
+  display: flex;
+  gap: 60px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  border-radius: 22px;
+  padding: 50px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.7);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.artist-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 45px rgba(196, 30, 58, 0.35);
+}
+
+/* ARTIST IMAGE */
+
+.artist-image img {
+  width: 300px;
+  border-radius: 18px;
+  box-shadow:
+    0 0 25px rgba(196, 30, 58, 0.5),
+    0 0 60px rgba(0, 0, 0, 0.8);
+}
+
+/* ARTIST INFO */
+
+.artist-info h2 {
+  font-size: 2.6em;
+  font-family: "textFont";
+  margin-bottom: 10px;
+}
+
+.artist-role {
+  font-family: "AOTFont";
+  color: gold;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.artist-bio {
+  font-family: "textFont";
+  font-size: 1.1em;
+  line-height: 1.8em;
+  color: #ddd;
+  max-width: 800px;
+  margin-bottom: 35px;
+}
+
+/* SONG LIST */
+
+.artist-songs h3 {
+  font-family: "AOTFont";
+  color: #c41e3a;
+  margin-bottom: 14px;
+}
+
+.artist-songs li {
+  font-style: italic;
+  color: #eee;
+  padding-left: 18px;
+  position: relative;
+}
+
+.artist-songs li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  color: gold;
+}
+
+.artist-songs ul {
+  list-style: none;
+}
+
+.s_white {
+  color: white;
+}
+
+.s_gold {
+  color: gold;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .artist-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
