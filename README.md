@@ -15,6 +15,16 @@ The archive contains:
 * Character visuals
 * Animated video backgrounds
 
+---
+
+## Screenshots
+
+![Home page - Hero](ScreenShots/1-Home.png)
+
+![Albums](ScreenShots/2-Albums.png)
+
+---
+
 ## Features
 
 * Dynamic multimedia interface
@@ -22,6 +32,8 @@ The archive contains:
 * Responsive frontend structure
 * Organized anime media archive
 * Interactive navigation experience
+
+---
 
 ## Technologies Used
 
@@ -31,9 +43,13 @@ The archive contains:
 * PHP
 * SQL
 
+---
+
 ## Warning ⚠️
 
 This project contains major spoilers for Attack on Titan.
+
+---
 
 ## Purpose
 
@@ -43,6 +59,8 @@ This project was created as a personal passion project and portfolio piece focus
 * multimedia presentation
 * backend functionality
 * anime-inspired UI experiences
+
+---
 
 ## Status
 
