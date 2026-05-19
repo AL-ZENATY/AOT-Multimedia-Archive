@@ -17,6 +17,12 @@ The archive contains:
 
 ---
 
+## Warning ⚠️
+
+This project contains major spoilers for Attack on Titan.
+
+---
+
 ## Screenshots
 
 ![Home page - Hero](ScreenShots/1-Home.png)
@@ -42,12 +48,6 @@ The archive contains:
 * JavaScript
 * PHP
 * SQL
-
----
-
-## Warning ⚠️
-
-This project contains major spoilers for Attack on Titan.
 
 ---
 
